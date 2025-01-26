@@ -26,3 +26,7 @@ dist-ssr
 # enivronment variables
 .env
 .env.*
+
+# Dependency directories
+node_modules
+jspm_packages
