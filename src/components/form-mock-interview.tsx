@@ -133,7 +133,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
               questions: aiResult,
               ...data,
               updatedAt: serverTimestamp(),
-            });
+            }).catch((error) => console.log(error));
             toast(toastMessage.title, { description: toastMessage.description});
           }
         } else {

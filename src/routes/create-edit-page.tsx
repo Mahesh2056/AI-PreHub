@@ -16,7 +16,7 @@ export const CreateEditPage = () => {
                     const interviewDoc = await getDoc(doc(db, "interviews", interviewId));
                     if (interviewDoc.exists()) {
                         setInterview({
-                            // id: interviewDoc.id,
+                            id: interviewDoc.id,
                             ...interviewDoc.data()
                         } as Interview);
                     }
