@@ -29,7 +29,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="flex w-full items-center justify-evenly md:px-12 md:py-16 md:items-center md:justify-end gap-12">
+        {/* <div className="flex w-full items-center justify-evenly md:px-12 md:py-16 md:items-center md:justify-end gap-12">
           <p className="text-3xl font-semibold text-gray-900 text-center">
             250k+
             <span className="block text-xl text-muted-foreground font-normal">
@@ -42,7 +42,7 @@ const HomePage = () => {
               Interview Aced
             </span>
           </p>
-        </div>
+        </div> */}
 
         {/* image section */}
         <div className="w-full mt-4 rounded-xl bg-gray-100 h-[420px] drop-shadow-md overflow-hidden relative">

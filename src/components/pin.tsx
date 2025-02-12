@@ -1,13 +1,9 @@
 import { Interview } from "@/types";
-import { useAuth } from "@clerk/clerk-react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
-    CardHeader,
     CardTitle,
   } from "@/components/ui/card";
 import { Badge } from "./ui/badge";
@@ -25,9 +21,6 @@ export const InterviewPin = ({
     onMockPage = false,
 }: InterviewPinProps) => {
     const navigate = useNavigate();
-
-    const { loading, setLoading } = useState(false);
-    const { userId } = useAuth();
 
   return (
     <Card className="p-4 rounded-md shadow-none hover:shadow-md shadow-gray-100 cursor-pointer transition-all space-y-4">
@@ -52,10 +45,10 @@ export const InterviewPin = ({
           )}
         >
           <p className="text-[12px] text-muted-foreground truncate whitespace-nowrap">
-           {`${new Date(interview.createdAt.toDate()).toLocaleDateString(
+           {`${new Date(interview?.createdAt.toDate()).toLocaleDateString(
             "en-US",
             { dateStyle: "long" }
-           )} - ${new Date(interview.createdAt.toDate()).toLocaleTimeString(
+           )} - ${new Date(interview?.createdAt.toDate()).toLocaleTimeString(
             "en-US",
             { timeStyle: "short" }
            )}`}
@@ -67,7 +60,7 @@ export const InterviewPin = ({
                   content="View"
                   buttonVariant={"ghost"}
                   onClick={() => {
-                    navigate(`/generate/${interview.id}`, { replace: true });
+                    navigate(`/generate/${interview?.id}`, { replace: true });
                   }}
                   disbaled={false}
                   buttonClassName="hover:text-sky-500"
